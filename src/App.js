@@ -1,15 +1,13 @@
 import Home from './routes/home/home.component';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './routes/navigation/navigation.component';
 
 const App = () => {
 
-  const Navigation = () => {
+  const Test = () => {
     return (
       <div>
-        <div>
-          <h1>I'm navigation bar</h1>
-        </div>
-        <Outlet />
+        <h1>I'm test</h1>
       </div>
     )
   }
@@ -18,6 +16,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index element={<Home />}/>
+        <Route path='test' element={<Test />}/>
       </Route>
     </Routes>
   );
