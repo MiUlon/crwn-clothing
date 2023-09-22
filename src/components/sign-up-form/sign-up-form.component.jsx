@@ -22,7 +22,7 @@ const SignUpForm = () => {
         setFormFields(defaultFormFields);
     };
 
-    const handleSumbit = async (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         if (password !== confirmPassword) {
@@ -53,7 +53,7 @@ const SignUpForm = () => {
         <div className='sign-up-container'>
             <h2>Don't have an account?</h2>
             <span>Sign up with your email and password</span>
-            <form onSubmit={handleSumbit}>
+            <form onSubmit={handleSubmit}>
                 <FormInput label='Display Name' type='text' required onChange={handleChange} name='displayName' value={displayName}/>
 
                 <FormInput label='Email' type='email' required onChange={handleChange} name='email' value={email}/>
