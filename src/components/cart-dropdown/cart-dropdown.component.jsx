@@ -6,7 +6,7 @@ const CartDropdown = () => {
     return (
         <div className='cart-dropdown-container'>
             <div className='cart-items'>
-                {[].map((item) => <CartDropdown cartItem={item}/>)}
+                {[].map((item) => <CartItem cartItem={item}/>)}
             </div>
             <Button>GO TO CHECKOUT</Button>
         </div>
